@@ -1,0 +1,32 @@
+@use "varsnmixins" as vm
+// RESET
+*,::after,::before
+    box-sizing: border-box
+body
+    width:100vw
+    min-height: 100vh
+    margin:0
+    overflow-x: hidden
+    background-color: vm.$lightGreen
+    font-family: sans-serif
+img
+    max-width: 100%
+
+ul
+    padding: 0
+    margin: 0
+li
+    list-style: none
+button
+    background: none
+    border: none
+a
+    text-decoration: none
+    color: #000
+// PRINCIPAL STYLES
+.header
+    width:100%
+.main
+    width:100%
+.foot
+    width: 100%

@@ -1,0 +1,72 @@
+@use "varsnmixins" as vm
+
+.nav
+    background-color: vm.$mainGreen
+    position: fixed
+    top: 0
+    width: 100%
+    padding: .5rem
+    z-index:1
+    &__ul
+        @include vm.flex(column,wrap)
+        gap: 5rem
+        position: absolute
+        top: 0
+        left: 0
+        width: 70vw
+        height: 100vh
+        padding:3rem 2rem
+        transform: translateX(-110%)
+        transform-origin: left
+        background-color: vm.$mainGreen
+        transition: transform .5s
+        &__li
+            font:
+                size: 1.2em
+                weight: bold
+    &__opener
+        width: 2.5rem
+        height: 2.5rem
+        padding: 0
+.ul--opened
+    transform: translateX(0) 
+.body--ul--opened 
+    overflow: hidden
+
+
+.slideWrapper
+    background-color: red
+    width:100%
+    margin-top: 3.5rem
+.slide
+    @include vm.flex(column,wrap,center,center)
+    position: relative
+    width: 100%
+    height: max(30vmax,20rem)
+    background-position: center
+    background-size: cover
+    color: #fff
+    z-index:0
+    &::after
+        content:""
+        position: absolute
+        top:0
+        width:100%
+        height: 100%
+        background-color: rgba( 0 0 0 / .3)
+        z-index: -1
+    &__title
+        text-transform: uppercase
+        margin: 0
+        font-size: min(5vmax,4em)
+        text-align: center
+    &__subtitle
+        margin: 0
+.slide1
+    background-image: url("/public/assets/restaurant_slide1.jpg")
+.slide2
+    background-image: url("/public/assets/disfruta_slide2.jpg")
+.slide3
+    background-image: url("/public/assets/dessert_sample.jpg")
+.slide--hidden
+    display: none
