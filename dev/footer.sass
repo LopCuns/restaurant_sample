@@ -1,0 +1,10 @@
+@use "varsnmixins" as vm
+
+.foot
+    @include vm.flex(row,wrap,space-evenly,center)
+    height: 5rem
+    margin-top:3rem
+    background-color: vm.$darkGreen
+    font-size: 1.4em
+    &__text
+        text-decoration: underline

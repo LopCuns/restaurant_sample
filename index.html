@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="public/styles/style.css">
     <link rel="stylesheet" href="public/styles/header.css">
+    <link rel="stylesheet" href="public/styles/main.css">
+    <link rel="stylesheet" href="public/styles/footer.css">
     <script src="https://kit.fontawesome.com/a712f4e92a.js" crossorigin="anonymous"></script>
     <title>| 🍽tu restaurante🍴 |</title>
 </head>
@@ -16,8 +18,8 @@
     <header class="header">
         <a id="inicio"></a>
         <nav class="nav">
-            <button class="nav__opener"><i class="fa-solid fa-bars fa-2x nav__opener__icon"></i></button>
-            <ul class="nav__ul">
+            <button class="nav__opener" id="menuBtn"><i class="fa-solid fa-bars fa-2x nav__opener__icon"></i></button>
+            <ul class="nav__ul" id="menu">
                 <li class="nav__ul__li"><a class="nav__ul__li__a" href="#inicio">Inicio</a></li>
                 <li class="nav__ul__li"><a class="nav__ul__li__a" href="#carta">Carta</a></li>
                 <li class="nav__ul__li"><a class="nav__ul__li__a" href="#dondeestamos">¿Dónde estamos?</a></li>
@@ -36,118 +38,147 @@
             <article class="slide slide3 slide--hidden">
                 <h2 class="slide__title">Los mejores postres</h2>
             </article>
+            <div class="dots">
+                <div class="dot dot--actual"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
         </section>
 
         <p class="description simple_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, corporis? Animi, fuga. Fugiat, repellat quos veritatis ullam totam, obcaecati quisquam corporis veniam aliquam fugit nostrum dolor modi delectus et blanditiis.</p>
     </header>
     <main class="main">
-        <section class="section carta">
+        <section class="section carta" id="platos">
             <a id="carta"></a>
-            <h2 class="section_title">Carta</h2>
+            <h2 class="section__title">Carta</h2>
             <article class="carta__platos">
-                <header class="carta__platos__header">
+                <header class="carta__platos__header" data-open="ensaladas">
                     <h3 class="carta__platos__title">Ensaladas</h3>
-                    <button class="carta__platos__opener"><i class="fa-solid fa-caret-down fontawicon"></i></button>
+                    <button class="carta__platos__opener"><i class="fa-solid fa-caret-down fa-2x fontawicon"></i></button>
                 </header>
-                <article class="carta__platos__recetas">
+                <article class="carta__platos__recetas" id="ensaladas">
                     <article class="carta__platos__recetas__receta">
-                        <img class="cara__platos__recetas__receta__img" alt="imagen de plato" src="public/assets/salad_sample.jpg">
-                        <h4 class="carta__platos__recetas__receta__name">Nombre del plato</h4>
-                        <p class="carta__platos__recetas__receta__ingredients">ingredientes</p>
-                        <p class="carta__platos__recetas__receta__precio">precio</p>
+                        <img class="carta__platos__recetas__receta__img" alt="imagen de plato" src="public/assets/salad_sample.jpg">
+                        <div class="carta__platos__recetas__receta__text">
+                            <h4 class="carta__platos__recetas__receta__name">Lorem ipsum dolor</h4>
+                            <p class="carta__platos__recetas__receta__ingredients">lorem,ipsum,dolor,sit,amet,consectetur,adipsicing,elit,Nulla,lacinia</p>
+                            <p class="carta__platos__recetas__receta__precio">89$</p>
+                        </div>
                     </article>
                     <article class="carta__platos__recetas__receta">
-                        <img class="cara__platos__recetas__receta__img" alt="imagen de plato" src="public/assets/salad_sample.jpg">
-                        <h4 class="carta__platos__recetas__receta__name">Nombre del plato</h4>
-                        <p class="carta__platos__recetas__receta__ingredients">ingredientes</p>
-                        <p class="carta__platos__recetas__receta__precio">precio</p>
+                        <img class="carta__platos__recetas__receta__img" alt="imagen de plato" src="public/assets/salad_sample.jpg">
+                        <div class="carta__platos__recetas__receta__text">
+                            <h4 class="carta__platos__recetas__receta__name">Lorem ipsum dolor</h4>
+                            <p class="carta__platos__recetas__receta__ingredients">lorem,ipsum,dolor,sit,amet,consectetur,adipsicing,elit,Nulla,lacinia</p>
+                            <p class="carta__platos__recetas__receta__precio">89$</p>
+                        </div>
                     </article>
                     <article class="carta__platos__recetas__receta">
-                        <img class="cara__platos__recetas__receta__img" alt="imagen de plato" src="public/assets/salad_sample.jpg">
-                        <h4 class="carta__platos__recetas__receta__name">Nombre del plato</h4>
-                        <p class="carta__platos__recetas__receta__ingredients">ingredientes</p>
-                        <p class="carta__platos__recetas__receta__precio">precio</p>
+                        <img class="carta__platos__recetas__receta__img" alt="imagen de plato" src="public/assets/salad_sample.jpg">
+                        <div class="carta__platos__recetas__receta__text">
+                            <h4 class="carta__platos__recetas__receta__name">Lorem ipsum dolor</h4>
+                            <p class="carta__platos__recetas__receta__ingredients">lorem,ipsum,dolor,sit,amet,consectetur,adipsicing,elit,Nulla,lacinia</p>
+                            <p class="carta__platos__recetas__receta__precio">89$</p>
+                        </div>
                     </article>
                     
                 </article>
             </article>
             <article class="carta__platos">
-                <header class="carta__platos__header">
+                <header class="carta__platos__header" data-open="carnesypescados">
                     <h3 class="carta__platos__title">Carnes y pescados</h3>
-                    <button class="carta__platos__opener"><i class="fa-solid fa-caret-down fontawicon"></i></button>
+                    <button class="carta__platos__opener"><i class="fa-solid fa-caret-down fa-2x fontawicon"></i></button>
                 </header>
-                <article class="carta__platos__recetas">
+                <article class="carta__platos__recetas" id="carnesypescados">
                     <article class="carta__platos__recetas__receta">
-                        <img class="cara__platos__recetas__receta__img" alt="imagen de plato" src="public/assets/meat_sample.jpg">
-                        <h4 class="carta__platos__recetas__receta__name">Nombre del plato</h4>
-                        <p class="carta__platos__recetas__receta__ingredients">ingredientes</p>
-                        <p class="carta__platos__recetas__receta__precio">precio</p>
+                        <img class="carta__platos__recetas__receta__img" alt="imagen de plato" src="public/assets/meat_sample.jpg">
+                        <div class="carta__platos__recetas__receta__text">
+                            <h4 class="carta__platos__recetas__receta__name">Lorem ipsum dolor</h4>
+                            <p class="carta__platos__recetas__receta__ingredients">lorem,ipsum,dolor,sit,amet,consectetur,adipsicing,elit,Nulla,lacinia</p>
+                            <p class="carta__platos__recetas__receta__precio">89$</p>
+                        </div>
                     </article>
                     <article class="carta__platos__recetas__receta">
-                        <img class="cara__platos__recetas__receta__img" alt="imagen de plato" src="public/assets/meat_sample.jpg">
-                        <h4 class="carta__platos__recetas__receta__name">Nombre del plato</h4>
-                        <p class="carta__platos__recetas__receta__ingredients">ingredientes</p>
-                        <p class="carta__platos__recetas__receta__precio">precio</p>
+                        <img class="carta__platos__recetas__receta__img" alt="imagen de plato" src="public/assets/meat_sample.jpg">
+                        <div class="carta__platos__recetas__receta__text">
+                            <h4 class="carta__platos__recetas__receta__name">Lorem ipsum dolor</h4>
+                            <p class="carta__platos__recetas__receta__ingredients">lorem,ipsum,dolor,sit,amet,consectetur,adipsicing,elit,Nulla,lacinia</p>
+                            <p class="carta__platos__recetas__receta__precio">89$</p>
+                        </div>
                     </article>
                     <article class="carta__platos__recetas__receta">
-                        <img class="cara__platos__recetas__receta__img" alt="imagen de plato" src="public/assets/meat_sample.jpg">
-                        <h4 class="carta__platos__recetas__receta__name">Nombre del plato</h4>
-                        <p class="carta__platos__recetas__receta__ingredients">ingredientes</p>
-                        <p class="carta__platos__recetas__receta__precio">precio</p>
+                        <img class="carta__platos__recetas__receta__img" alt="imagen de plato" src="public/assets/meat_sample.jpg">
+                        <div class="carta__platos__recetas__receta__text">
+                            <h4 class="carta__platos__recetas__receta__name">Lorem ipsum dolor</h4>
+                            <p class="carta__platos__recetas__receta__ingredients">lorem,ipsum,dolor,sit,amet,consectetur,adipsicing,elit,Nulla,lacinia</p>
+                            <p class="carta__platos__recetas__receta__precio">89$</p>
+                        </div>
                     </article>
                     
                 </article>
             </article>
             <article class="carta__platos">
-                <header class="carta__platos__header">
+                <header class="carta__platos__header" data-open="menuinfantil">
                     <h3 class="carta__platos__title">Menú infantil</h3>
-                    <button class="cata__platos__opener"><i class="fa-solid fa-caret-down fontawicon"></i></button>
+                    <button class="carta__platos__opener"><i class="fa-solid fa-caret-down fa-2x  fontawicon"></i></button>
                 </header>
-                <article class="carta__platos__recetas">
+                <article class="carta__platos__recetas" id="menuinfantil">
                     <article class="carta__platos__recetas__receta">
-                        <img class="cara__platos__recetas__receta__img" alt="imagen de plato" src="public/assets/menuinf_sample.jpg">
-                        <h4 class="carta__platos__recetas__receta__name">Nombre del plato</h4>
-                        <p class="carta__platos__recetas__receta__ingredients">ingredientes</p>
-                        <p class="carta__platos__recetas__receta__precio">precio</p>
+                        <img class="carta__platos__recetas__receta__img" alt="imagen de plato" src="public/assets/menuinf_sample.jpg">
+                        <div class="carta__platos__recetas__receta__text">
+                            <h4 class="carta__platos__recetas__receta__name">Lorem ipsum dolor</h4>
+                            <p class="carta__platos__recetas__receta__ingredients">lorem,ipsum,dolor,sit,amet,consectetur,adipsicing,elit,Nulla,lacinia</p>
+                            <p class="carta__platos__recetas__receta__precio">89$</p>
+                        </div>
                     </article>
                     <article class="carta__platos__recetas__receta">
-                        <img class="cara__platos__recetas__receta__img" alt="imagen de plato" src="public/assets/menuinf_sample.jpg">
-                        <h4 class="carta__platos__recetas__receta__name">Nombre del plato</h4>
-                        <p class="carta__platos__recetas__receta__ingredients">ingredientes</p>
-                        <p class="carta__platos__recetas__receta__precio">precio</p>
+                        <img class="carta__platos__recetas__receta__img" alt="imagen de plato" src="public/assets/menuinf_sample.jpg">
+                        <div class="carta__platos__recetas__receta__text">
+                            <h4 class="carta__platos__recetas__receta__name">Lorem ipsum dolor</h4>
+                            <p class="carta__platos__recetas__receta__ingredients">lorem,ipsum,dolor,sit,amet,consectetur,adipsicing,elit,Nulla,lacinia</p>
+                            <p class="carta__platos__recetas__receta__precio">89$</p>
+                        </div>
                     </article>
                     <article class="carta__platos__recetas__receta">
-                        <img class="cara__platos__recetas__receta__img" alt="imagen de plato" src="public/assets/menuinf_sample.jpg">
-                        <h4 class="carta__platos__recetas__receta__name">Nombre del plato</h4>
-                        <p class="carta__platos__recetas__receta__ingredients">ingredientes</p>
-                        <p class="carta__platos__recetas__receta__precio">precio</p>
+                        <img class="carta__platos__recetas__receta__img" alt="imagen de plato" src="public/assets/menuinf_sample.jpg">
+                        <div class="carta__platos__recetas__receta__text">
+                            <h4 class="carta__platos__recetas__receta__name">Lorem ipsum dolor</h4>
+                            <p class="carta__platos__recetas__receta__ingredients">lorem,ipsum,dolor,sit,amet,consectetur,adipsicing,elit,Nulla,lacinia</p>
+                            <p class="carta__platos__recetas__receta__precio">89$</p>
+                        </div>
                     </article>
                     
                 </article>
             </article>
             <article class="carta__platos">
-                <header class="carta__platos__header">
+                <header class="carta__platos__header" data-open="postres">
                     <h3 class="carta__platos__title">Postres</h3>
-                    <button class="carta__platos__opener"><i class="fa-solid fa-caret-down fontawicon"></i></button>
+                    <button class="carta__platos__opener"><i class="fa-solid fa-caret-down fa-2x fontawicon"></i></button>
                 </header>
-                <article class="carta__platos__recetas">
+                <article class="carta__platos__recetas" id="postres">
                     <article class="carta__platos__recetas__receta">
-                        <img class="cara__platos__recetas__receta__img" alt="imagen de plato" src="public/assets/dessert_sample.jpg">
-                        <h4 class="carta__platos__recetas__receta__name">Nombre del plato</h4>
-                        <p class="carta__platos__recetas__receta__ingredients">ingredientes</p>
-                        <p class="carta__platos__recetas__receta__precio">precio</p>
+                        <img class="carta__platos__recetas__receta__img" alt="imagen de plato" src="public/assets/dessert_sample.jpg">
+                        <div class="carta__platos__recetas__receta__text">
+                            <h4 class="carta__platos__recetas__receta__name">Lorem ipsum dolor</h4>
+                            <p class="carta__platos__recetas__receta__ingredients">lorem,ipsum,dolor,sit,amet,consectetur,adipsicing,elit,Nulla,lacinia</p>
+                            <p class="carta__platos__recetas__receta__precio">89$</p>
+                        </div>
                     </article>
                     <article class="carta__platos__recetas__receta">
-                        <img class="cara__platos__recetas__receta__img" alt="imagen de plato" src="public/assets/dessert_sample.jpg">
-                        <h4 class="carta__platos__recetas__receta__name">Nombre del plato</h4>
-                        <p class="carta__platos__recetas__receta__ingredients">ingredientes</p>
-                        <p class="carta__platos__recetas__receta__precio">precio</p>
+                        <img class="carta__platos__recetas__receta__img" alt="imagen de plato" src="public/assets/dessert_sample.jpg">
+                        <div class="carta__platos__recetas__receta__text">
+                            <h4 class="carta__platos__recetas__receta__name">Lorem ipsum dolor</h4>
+                            <p class="carta__platos__recetas__receta__ingredients">lorem,ipsum,dolor,sit,amet,consectetur,adipsicing,elit,Nulla,lacinia</p>
+                            <p class="carta__platos__recetas__receta__precio">89$</p>
+                        </div>
                     </article>
                     <article class="carta__platos__recetas__receta">
-                        <img class="cara__platos__recetas__receta__img" alt="imagen de plato" src="public/assets/dessert_sample.jpg">
-                        <h4 class="carta__platos__recetas__receta__name">Nombre del plato</h4>
-                        <p class="carta__platos__recetas__receta__ingredients">ingredientes</p>
-                        <p class="carta__platos__recetas__receta__precio">precio</p>
+                        <img class="carta__platos__recetas__receta__img" alt="imagen de plato" src="public/assets/dessert_sample.jpg">
+                        <div class="carta__platos__recetas__receta__text">
+                            <h4 class="carta__platos__recetas__receta__name">Lorem ipsum dolor</h4>
+                            <p class="carta__platos__recetas__receta__ingredients">lorem,ipsum,dolor,sit,amet,consectetur,adipsicing,elit,Nulla,lacinia</p>
+                            <p class="carta__platos__recetas__receta__precio">89$</p>
+                        </div>
                     </article>
                     
                 </article>
@@ -155,12 +186,12 @@
         </section>
         <section class="section dondeEstamos">
             <a id="dondeestamos"></a>
-            <h2 class="section_title">¿Dónde estamos?</h2>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11598.359258013887!2d-8.400820562548851!3d43.3856000995832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2e7c72b185d557%3A0x82932864f310d7a0!2sTorre%20de%20H%C3%A9rcules!5e0!3m2!1ses!2ses!4v1672843367526!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="dondeEstamos__map"></iframe>
+            <h2 class="section__title">¿Dónde estamos?</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11598.359258013887!2d-8.400820562548851!3d43.3856000995832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2e7c72b185d557%3A0x82932864f310d7a0!2sTorre%20de%20H%C3%A9rcules!5e0!3m2!1ses!2ses!4v1672843367526!5m2!1ses!2ses"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="dondeEstamos__map"></iframe>
         </section>
         <section class="section horarios">
             <a id="horarios"></a>
-            <h2 class="section_title">Horarios</h2>
+            <h2 class="section__title">Horarios</h2>
             <div class="horarios__days">
                 <div class="horarios__days__day">
                     <p class="horarios__days__day__name">Lunes</p>
@@ -194,10 +225,10 @@
         </section>
         <section class="section contacto_y_reservas">
             <a id="contactoyreservas"></a>
-            <h2 class="section_title">Contacto y reservas</h2>
+            <h2 class="section__title">Contacto y reservas</h2>
             <div class="contacto_y_reservas__contactos">
                 <p class="contacto_y_reservas__contactos__media">Dirección: rúa xx calle xx avenida de xx</p>
-                <p class="contacto_y_reservas__contactos__media">Teléfono:123-123-123</p>
+                <p class="contacto_y_reservas__contactos__media">Teléfono: 123-123-123</p>
                 <p class="contacto_y_reservas__contactos__media">Email: turestaurante@turestaurante.com</p>
                 <p class="contacto_y_reservas__contactos__media">Redes: <i class="fa-brands fa-instagram fontawicon"></i> <i class="fa-brands fa-tiktok fontawicon"></i> <i class="fa-brands fa-facebook fontawicon"></i></p>
             </div>
@@ -207,6 +238,6 @@
         <a class="foot__text" href="https://github.com/LopCuns" target="_blank">LopCuns web developer</a>
         <i class="fa-brands fa-creative-commons fontawicon"></i>
     </footer>
-    <script src="public/scripts/main.js"></script>
+    <script src="public/scripts/main.js" type="module"></script>
 </body>
 </html>

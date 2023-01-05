@@ -1,0 +1,95 @@
+@use "varsnmixins" as vm
+.main
+    width: 100%
+// CARTA STYLES
+.carta
+    @include vm.flex(column,wrap,center,center)
+    &__platos
+        width: 100%
+        overflow: hidden
+        &__header
+            @include vm.flex(row,wrap,space-between,center)
+            padding: 0 1rem
+            background-color: vm.$mainGreen
+            &:hover
+                background-color: vm.$darkGreen
+        &__title
+            font-weight: bold
+        &__opener
+            padding: 1rem
+            transform: rotate(0)
+            transition: transform .3s
+        &__recetas
+            width: 100%
+            height: 0
+            display: grid
+            grid-template-columns: repeat(auto-fit,minmax(20rem,1fr))
+            gap: 1rem
+            padding: 0rem
+            overflow: hidden
+            transition: padding .3s 
+            &__receta
+                @include vm.flex(row,wrap,space-between,center)
+                padding: 1rem
+                box-shadow: 0px 0px 47px 13px rgba(166,234,206,0.75)
+                border-radius: 10px
+                &__img
+                    width: 50%
+                    height:100%
+                    object-fit: cover
+                &__text
+                    @include vm.flex(column,wrap,center,start)
+                    gap: .3rem
+                    width: 50%
+                    height:100%
+                    padding:0 1rem
+                &__name
+                    margin:0
+                &__ingredients
+                    max-width: 100%
+                    word-break: break-all
+                    margin: 0
+                &__precio   
+                    margin:0
+.opener--opened
+    transform: rotate(180deg)
+.recetas--opened
+    height: auto
+    padding: 1rem
+@media screen and (min-width: 688px) and (max-width:1020px)
+    .carta__platos__recetas
+        background: url("/public/assets/turestaurante_logo.png") no-repeat
+        background-size: 15rem
+        background-position: bottom -1rem right 13.5%
+
+
+//¿DÓNDE ESTAMOS? STYLES
+
+.dondeEstamos
+    &__map
+        display: inline-block
+        width: min(100%,60rem)
+        height:20rem
+        border: 0
+
+//HORARIOS STYLES
+
+
+.horarios__days
+    @include vm.flex(column,wrap,center,center)
+    width: min(40rem,100%)
+    &__day
+        @include vm.flex(row,wrap,center)
+        gap: 2rem
+        padding-left: .5rem
+        font:
+            size: 1.2em
+            weight: bold
+
+//CONTACTO Y RESERVAS STYLES
+.contacto_y_reservas
+    font:
+        family: vm.$pconflict
+    &__contactos__media
+        font-size: min(8vw,3em)
+        text-align-last: justify

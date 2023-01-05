@@ -2,6 +2,8 @@
 // RESET
 *,::after,::before
     box-sizing: border-box
+html
+    scroll-behavior: smooth
 body
     width:100vw
     min-height: 100vh
@@ -23,6 +25,20 @@ button
 a
     text-decoration: none
     color: #000
+// UTILITY CLASSES
+.simple_text
+    text-align: justify
+    line-height: 2rem
+    font-size: 1.1em
+
+.section
+    @include vm.flex(column,wrap,center,center)
+    width: 100%
+    margin-top: 5rem
+    &__title
+        font:
+            size: 3em
+            family: vm.$pconflict
 // PRINCIPAL STYLES
 .header
     width:100%
