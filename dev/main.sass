@@ -10,15 +10,18 @@
         &__header
             @include vm.flex(row,wrap,space-between,center)
             padding: 0 1rem
-            background-color: vm.$mainGreen
+            background-color: vm.$fluoGreen
             &:hover
-                background-color: vm.$darkGreen
+                background-color: transparentize(vm.$mainGreen,0.5)
         &__title
             font-weight: bold
+            pointer-events: none
+            cursor: default
         &__opener
             padding: 1rem
             transform: rotate(0)
             transition: transform .3s
+            pointer-events: none
         &__recetas
             width: 100%
             height: 0
@@ -30,13 +33,16 @@
             transition: padding .3s 
             &__receta
                 @include vm.flex(row,wrap,space-between,center)
+                height: 15rem
                 padding: 1rem
                 box-shadow: 0px 0px 47px 13px rgba(166,234,206,0.75)
                 border-radius: 10px
                 &__img
+                    display: block
                     width: 50%
                     height:100%
                     object-fit: cover
+                    border-radius: 10px
                 &__text
                     @include vm.flex(column,wrap,center,start)
                     gap: .3rem
@@ -66,6 +72,7 @@
 //¿DÓNDE ESTAMOS? STYLES
 
 .dondeEstamos
+    background-color: vm.$blueGreen
     &__map
         display: inline-block
         width: min(100%,60rem)
@@ -74,17 +81,19 @@
 
 //HORARIOS STYLES
 
-
-.horarios__days
-    @include vm.flex(column,wrap,center,center)
-    width: min(40rem,100%)
-    &__day
-        @include vm.flex(row,wrap,center)
-        gap: 2rem
-        padding-left: .5rem
-        font:
-            size: 1.2em
-            weight: bold
+.horarios
+    background-color: vm.$mainGreen
+    &__days
+        @include vm.flex(column,wrap,center,center)
+        width: min(40rem,100%)
+        z-index: 0
+        &__day
+            @include vm.flex(row,wrap,center)
+            gap: 2rem
+            padding-left: .5rem
+            font:
+                size: 1.2em
+                weight: bold
 
 //CONTACTO Y RESERVAS STYLES
 .contacto_y_reservas
